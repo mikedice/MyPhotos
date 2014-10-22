@@ -54,9 +54,9 @@ namespace MyPhotos
             //   consumerKey: "",
             //   consumerSecret: "");
 
-            //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
+            app.UseFacebookAuthentication(
+               appId: "653258278123084",
+               appSecret: "79b5fd855538c03a38375a242ad4337d");
 
             //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             //{
