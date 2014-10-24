@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Configuration;
+using System.Collections.Specialized;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
@@ -54,9 +56,10 @@ namespace MyPhotos
             //   consumerKey: "",
             //   consumerSecret: "");
 
-            app.UseFacebookAuthentication(
-               appId: "653258278123084",
-               appSecret: "79b5fd855538c03a38375a242ad4337d");
+            var settings = (NameValueCollection)ConfigurationManager.GetSection("MyPhotosSettings");
+            var appId = settings["FaceBookAppId"];
+            var secret = settings["FaceBookSecret"];
+            app.UseFacebookAuthentication(appId: appId, appSecret: secret);
 
             //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             //{
