@@ -22,3 +22,21 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.image-control-group {
+    margin-top: 45px;
+}
+
+.thumb-image {
+    display: block;
+}
+
+.delete_image_check {
+    
+}
+.gallery-caption-textarea
+{
+    width:600px;
+    max-width:600px;
+    height: 150px;
+}

@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Specialized;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data.Entity;
 using System.Linq;
 using System.Security.Claims;
@@ -35,6 +37,7 @@ namespace MyPhotos
     // Configure the application user manager used in this application. UserManager is defined in ASP.NET Identity and is used by the application.
     public class ApplicationUserManager : UserManager<ApplicationUser>
     {
+        public const string AdminRoleName = "admins";
         public ApplicationUserManager(IUserStore<ApplicationUser> store)
             : base(store)
         {
@@ -84,7 +87,56 @@ namespace MyPhotos
                 manager.UserTokenProvider = 
                     new DataProtectorTokenProvider<ApplicationUser>(dataProtectionProvider.Create("ASP.NET Identity"));
             }
+            
+            // Verify that the admin role exists and the bootstrap users are in the
+            // admin role. Whenever the website runs we make sure bootstrap users
+            // are populated.
+            var adminRole = FindOrCreateAdminRole(context);
+            VerifyAdminUsers(adminRole, manager);
+
             return manager;
+        }
+
+        private static IdentityRole FindOrCreateAdminRole(IOwinContext context)
+        {
+            var ac = context.Get<ApplicationDbContext>();
+            var roles = from r in ac.Roles where r.Name.Equals(AdminRoleName, StringComparison.OrdinalIgnoreCase) select r;
+            if (!roles.Any())
+            {
+                ac.Roles.Add(new IdentityRole(AdminRoleName));
+                var dbContext = (DbContext)ac;
+                dbContext.SaveChanges();
+            }
+
+            ac = context.Get<ApplicationDbContext>();
+
+            roles = from r in ac.Roles where r.Name.Equals(AdminRoleName, StringComparison.OrdinalIgnoreCase) select r;
+            return roles.First();
+        }
+
+        private static void VerifyAdminUsers(IdentityRole adminRole, ApplicationUserManager manager)
+        {
+            var settings = (NameValueCollection)ConfigurationManager.GetSection("MyPhotosSettings");
+            var bootstrapAdminsCsv = settings["BootstrapAdmins"];
+            if (string.IsNullOrEmpty(bootstrapAdminsCsv))
+            {
+                return;
+            }
+
+            var bootstrapAdmins = bootstrapAdminsCsv.Split(new char[] { ',' });
+
+            foreach(var admin in bootstrapAdmins)
+            {
+                var selection = from u in manager.Users where u.UserName.Equals(admin, StringComparison.OrdinalIgnoreCase) select u;
+                if (selection.Any())
+                {
+                    var user = selection.First();
+                    if (!manager.IsInRole(user.Id, adminRole.Name))
+                    {
+                        manager.AddToRoles(user.Id, new string[] { adminRole.Name });
+                    }
+                }
+            }
         }
     }
 

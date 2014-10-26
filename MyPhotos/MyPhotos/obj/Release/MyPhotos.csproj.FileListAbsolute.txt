@@ -52,3 +52,9 @@ C:\Users\mikedice\Documents\GitHub\MyPhotos\MyPhotos\MyPhotos\bin\Microsoft.AspN
 C:\Users\mikedice\Documents\GitHub\MyPhotos\MyPhotos\MyPhotos\bin\Microsoft.AspNet.Identity.EntityFramework.xml
 C:\Users\mikedice\Documents\GitHub\MyPhotos\MyPhotos\MyPhotos\obj\Release\MyPhotos.dll
 C:\Users\mikedice\Documents\GitHub\MyPhotos\MyPhotos\MyPhotos\obj\Release\MyPhotos.pdb
+C:\Users\mikedice\Documents\GitHub\MyPhotos\MyPhotos\MyPhotos\bin\Microsoft.Practices.Unity.Configuration.dll
+C:\Users\mikedice\Documents\GitHub\MyPhotos\MyPhotos\MyPhotos\bin\Microsoft.Practices.Unity.dll
+C:\Users\mikedice\Documents\GitHub\MyPhotos\MyPhotos\MyPhotos\bin\Unity.Mvc5.dll
+C:\Users\mikedice\Documents\GitHub\MyPhotos\MyPhotos\MyPhotos\bin\Microsoft.Practices.Unity.xml
+C:\Users\mikedice\Documents\GitHub\MyPhotos\MyPhotos\MyPhotos\bin\Microsoft.Practices.Unity.Configuration.xml
+C:\Users\mikedice\Documents\GitHub\MyPhotos\MyPhotos\MyPhotos\obj\Release\MyPhotos.csprojResolveAssemblyReference.cache
