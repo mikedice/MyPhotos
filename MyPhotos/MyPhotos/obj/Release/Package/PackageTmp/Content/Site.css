@@ -32,11 +32,38 @@ textarea {
 }
 
 .delete_image_check {
-    
 }
-.gallery-caption-textarea
-{
-    width:600px;
-    max-width:600px;
+
+.gallery-caption-textarea {
+    width: 600px;
+    max-width: 600px;
     height: 150px;
+}
+
+.thumbnail-cloud-image {
+    min-width: 120px;
+    max-width: 120px;
+    display: block;
+}
+
+    .thumbnail-cloud-image:hover {
+        opacity: .4;
+        cursor: pointer;
+    }
+
+.image-cloud-column {
+    display: inline-block;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    vertical-align: top;
+    margin-right: -4px; /*remove whitespace between columns*/
+}
+
+    .image-cloud-column li {
+        text-decoration: none;
+    }
+
+.gallery-container {
+    min-width: 960px;
 }

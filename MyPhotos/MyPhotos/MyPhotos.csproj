@@ -179,6 +179,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ContentController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PhotoManagerController.cs" />
@@ -187,6 +188,7 @@
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\GalleryUploadModel.cs" />
+    <Compile Include="Models\HomePageModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -202,6 +204,12 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AngularApp\app\myPhotosApp.js" />
+    <Content Include="AngularApp\controllers\galleriesListController.js" />
+    <Content Include="AngularApp\controllers\galleryViewController.js" />
+    <Content Include="AngularApp\partials\list-galleries.html" />
+    <Content Include="AngularApp\partials\view-gallery.html" />
+    <Content Include="AngularApp\services\contentService.js" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -275,7 +283,9 @@
     <Content Include="Views\PhotoManager\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="AngularApp\lib\" />
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Content\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
