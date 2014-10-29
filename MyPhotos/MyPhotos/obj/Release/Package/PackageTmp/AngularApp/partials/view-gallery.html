@@ -2,7 +2,7 @@
     <h2>{{gallery.Gallery.Metadata.Name}}</h2>
     <div class="row display-gallery-block" ng-repeat="image in gallery.Gallery.Images">
         <img src="{{image.WebUrl}}" alt="" />
-        <p>{{image.Caption}}</p>
+        <p>{{image.ImageMetadata.Caption}}</p>
         <p>{{image.Name}}</p><a href="{{image.FullUrl}}" download="{{image.Name}}">download full size</a>
         <hr />
     </div>
