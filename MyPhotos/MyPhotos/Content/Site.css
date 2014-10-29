@@ -67,3 +67,13 @@ textarea {
 .gallery-container {
     min-width: 960px;
 }
+
+.display-gallery-block a{
+    display:block;
+}
+.display-gallery-block img{
+    display:block;
+}
+.display-gallery-block p{
+    margin:0;
+}

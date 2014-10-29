@@ -41,49 +41,51 @@ namespace MyPhotos.Controllers
             HomePageModel model = new HomePageModel();
             var viewGalleries = new List<ViewGallery>();
 
-            var first = galleries.First();
-
-            int imageCount = first.Images.Count();
-            int numColumns = 0;
-            int imagesPerColumn = 0;
-
-            if (imageCount <= MaxColumns)
+            foreach (var gallery in galleries)
             {
-                imagesPerColumn = 1;
-                numColumns = imageCount;
-            }
-            else
-            {
-                numColumns = MaxColumns;
-                imagesPerColumn = imageCount / numColumns;
-            }
 
-            var images = first.Images.ToList();
-            ImageColumn[] columns = new ImageColumn[numColumns];
-            int imageIndex = 0;
-            int imagesRemain = images.Count;
-            for (int c = 0; c < columns.Length; c++)
-            {
-                columns[c] = new ImageColumn()
+                int imageCount = gallery.Images.Count();
+                int numColumns = 0;
+                int imagesPerColumn = 0;
+
+                if (imageCount <= MaxColumns)
                 {
-                    Images = new List<Image>()
-                };
-
-                int imagesToAdd = Math.Min(imagesRemain, imagesPerColumn);
-                for (int i = 0; i < imagesToAdd; i++)
-                {
-                    columns[c].Images.Add(images[imageIndex]);
-                    imageIndex++;
-                    imagesRemain--;
+                    imagesPerColumn = 1;
+                    numColumns = imageCount;
                 }
-            }
+                else
+                {
+                    numColumns = MaxColumns;
+                    imagesPerColumn = imageCount / numColumns;
+                }
 
-            ViewGallery vg = new ViewGallery
-            {
-                ImageColumns = columns.ToList<ImageColumn>(),
-                Gallery = first
-            };
-            viewGalleries.Add(vg);
+                var images = gallery.Images.ToList();
+                ImageColumn[] columns = new ImageColumn[numColumns];
+                int imageIndex = 0;
+                int imagesRemain = images.Count;
+                for (int c = 0; c < columns.Length; c++)
+                {
+                    columns[c] = new ImageColumn()
+                    {
+                        Images = new List<Image>()
+                    };
+
+                    int imagesToAdd = Math.Min(imagesRemain, imagesPerColumn);
+                    for (int i = 0; i < imagesToAdd; i++)
+                    {
+                        columns[c].Images.Add(images[imageIndex]);
+                        imageIndex++;
+                        imagesRemain--;
+                    }
+                }
+
+                ViewGallery vg = new ViewGallery
+                {
+                    ImageColumns = columns.ToList<ImageColumn>(),
+                    Gallery = gallery
+                };
+                viewGalleries.Add(vg);
+            }
             model.ViewGalleries = viewGalleries;
             var json = JsonConvert.SerializeObject(model);
             var contentResult = new ContentResult()

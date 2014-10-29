@@ -7,6 +7,6 @@ myapp.config(['$routeProvider', function ($routeProvider) {
     .when('/ViewGallery/:galleryName/:startImage?', {
         templateUrl: '/AngularApp/partials/view-gallery.html',
         controller: 'galleryViewController'
-    });
-
+    })
+    .when('/_=_', {redirectTo: '/'}); /* What the fuck Facebook? :( */
 }]);

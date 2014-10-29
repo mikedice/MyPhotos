@@ -6,6 +6,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
+using Microsoft.Owin.Security.Facebook;
 using Owin;
 using MyPhotos.Models;
 
@@ -59,7 +60,14 @@ namespace MyPhotos
             var settings = (NameValueCollection)ConfigurationManager.GetSection("MyPhotosSettings");
             var appId = settings["FaceBookAppId"];
             var secret = settings["FaceBookSecret"];
-            app.UseFacebookAuthentication(appId: appId, appSecret: secret);
+            var opts = new FacebookAuthenticationOptions
+            {
+
+                AppId = appId,
+                AppSecret = secret,
+                CallbackPath = new PathString("/fb-a")
+            };
+            app.UseFacebookAuthentication(opts);
 
             //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             //{
