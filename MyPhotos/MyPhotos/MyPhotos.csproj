@@ -223,8 +223,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
-    <None Include="Properties\PublishProfiles\MyPhotos6084 %282%29.pubxml" />
-    <None Include="Properties\PublishProfiles\MyPhotos6084.pubxml" />
+    <None Include="Properties\PublishProfiles\MyPhotos6085.pubxml" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="images\defaultThumbnail.png" />
     <Content Include="Scripts\bootstrap.js" />
@@ -282,6 +281,7 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\PhotoManager\Index.cshtml" />
+    <Content Include="Views\Shared\_Layout.mobile.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="AngularApp\lib\" />
@@ -308,9 +308,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>56043</DevelopmentServerPort>
+          <DevelopmentServerPort>443</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>https://myphotos6084.azurewebsites.net</IISUrl>
+          <IISUrl>https://devel.mikedicepics.com</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

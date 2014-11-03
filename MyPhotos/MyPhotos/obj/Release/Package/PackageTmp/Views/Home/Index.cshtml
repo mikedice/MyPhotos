@@ -1,46 +1,4 @@
-﻿<!--
-@using MyPhotos.Services
-@using MyPhotos.Models
-@using System.Collections.Generic
-@model HomePageModel
-
-@{
-    ViewBag.Title = "Home Page";
-}
--->
+﻿
 <div ng-app="myPhotosApp">
     <div ng-view></div>
 </div>
-
-@*
-@foreach (ViewGallery vg in Model.ViewGalleries)
-{
-    <div class="gallery-container row">
-        <div class="row">
-            <div class="col-md-4">
-                <h3>@vg.Gallery.Metadata.Name</h3>
-                <p>@vg.Gallery.Metadata.GalleryDate</p>
-                <h4>@vg.Gallery.Metadata.GalleryLocation</h4>
-            </div>
-
-
-        </div>
-        <div class="row">
-            <p class="col-md-12">@vg.Gallery.Metadata.GalleryCaption</p>
-        </div>
-        <div class="col-md-12">
-            @foreach (var col in vg.ImageColumns)
-            {
-                <ul class="image-cloud-column">
-                    @foreach (var image in col)
-                    {
-                        <li class="image-cloud-li">
-                            <img class="thumbnail-cloud-image" src="@image.ThumbnailUrl" alt="thumb" />
-                        </li>
-                    }
-                </ul>
-            }
-        </div>
-    </div>
-}
-*@

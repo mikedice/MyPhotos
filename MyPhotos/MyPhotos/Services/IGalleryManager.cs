@@ -10,6 +10,7 @@ namespace MyPhotos.Services
     {
         CreateDate,
         LastUpdateDate,
+        GalleryDate,
         Name,
     }
     public enum GalleryOrderDirection

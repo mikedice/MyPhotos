@@ -22,13 +22,13 @@ namespace MyPhotos.Controllers
         
         public ActionResult HomepageGalleries()
         {
-            var galleries = galleryManager.ListGalleries(GalleryOrder.LastUpdateDate, GalleryOrderDirection.Descending);
+            var galleries = galleryManager.ListGalleries(GalleryOrder.GalleryDate, GalleryOrderDirection.Descending);
             return ContentResultFromGalleryList(galleries);
         }
 
         public ActionResult HomepageGallery(string galleryName)
         {
-            var galleries = galleryManager.ListGalleries(GalleryOrder.LastUpdateDate, GalleryOrderDirection.Descending);
+            var galleries = galleryManager.ListGalleries(GalleryOrder.GalleryDate, GalleryOrderDirection.Descending);
             var selection = from g in galleries where g.Metadata.Name.Equals(galleryName, StringComparison.OrdinalIgnoreCase) select g;
             if (selection.Any())
             {

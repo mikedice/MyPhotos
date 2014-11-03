@@ -1,26 +1,53 @@
 ﻿
 <div ng-repeat="viewGallery in galleryCollection.ViewGalleries">
-    <div class="gallery-container row">
+    <div class="gallery-container container">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-xs-4">
                 <h3>{{viewGallery.Gallery.Metadata.Name}}</h3>
                 <p>{{viewGallery.Gallery.Metadata.GalleryDate | date : 'MM/dd/yyyy'}}</p>
                 <h4>{{viewGallery.Gallery.Metadata.GalleryLocation}}</h4>
             </div>
         </div>
         <div class="row">
-            <p class="col-md-12">{{viewGallery.Gallery.Metadata.GalleryCaption}}</p>
+            <p class="col-xs-4 col-md-12">{{viewGallery.Gallery.Metadata.GalleryCaption}}</p>
         </div>
-        <div class="col-md-12">
-            <ul ng-repeat="col in viewGallery.ImageColumns" class="image-cloud-column">
-                <li ng-repeat="image in col.Images" class="image-cloud-li">
-                    <img class="thumbnail-cloud-image"
-                         src="{{image.ThumbnailUrl}}"
-                         alt="thumb"
-                         ng-click="startViewer(viewGallery.Gallery.Metadata.Name, image.Name)" />
-                </li>
-            </ul>
+        <div ng-if="!stackColumns" class="row">
+            <div class="col-md-12">
+                <ul ng-repeat="col in viewGallery.ImageColumns" class="image-cloud-column">
+                    <li ng-repeat="image in col.Images" class="image-cloud-li">
+                        <img class="thumbnail-cloud-image"
+                             src="{{image.ThumbnailUrl}}"
+                             alt="thumb"
+                             ng-click="startViewer(viewGallery.Gallery.Metadata.Name, image.Name)" />
+                    </li>
+                </ul>
+            </div>
         </div>
+        <div ng-if="stackColumns">
+            <div class="row">
+                <div class="col-xs-4">
+                    <ul ng-if="viewGallery.ColumnSets.Column1" class="image-cloud-column">
+                        <li ng-repeat="image in viewGallery.ColumnSets.Column1" class="image-cloud-li">
+                            <img class="thumbnail-cloud-image"
+                                 src="{{image.ThumbnailUrl}}"
+                                 alt="thumb"
+                                 ng-click="startViewer(viewGallery.Gallery.Metadata.Name, image.Name)" />
+                        </li>
+                    </ul>
+                    <ul ng-if="viewGallery.ColumnSets.Column2" class="image-cloud-column">
+                        <li ng-repeat="image in viewGallery.ColumnSets.Column2" class="image-cloud-li">
+                            <img class="thumbnail-cloud-image"
+                                 src="{{image.ThumbnailUrl}}"
+                                 alt="thumb"
+                                 ng-click="startViewer(viewGallery.Gallery.Metadata.Name, image.Name)" />
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
     </div>
-    
+
+</div>
+
 </div>

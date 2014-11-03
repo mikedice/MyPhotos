@@ -140,6 +140,10 @@ namespace MyPhotos.Services
                 {
                     result = galleries.OrderBy(g => g.Metadata.LastUpdate);
                 }
+                else if (order == GalleryOrder.GalleryDate)
+                {
+                    result = galleries.OrderBy(g => g.Metadata.GalleryDate);
+                }
             }
             else if (direction == GalleryOrderDirection.Descending)
             {
@@ -154,6 +158,10 @@ namespace MyPhotos.Services
                 else if (order == GalleryOrder.LastUpdateDate)
                 {
                     result = galleries.OrderByDescending(g => g.Metadata.LastUpdate);
+                }
+                else if (order == GalleryOrder.GalleryDate)
+                {
+                    result = galleries.OrderByDescending(g => g.Metadata.GalleryDate);
                 }
             }
             return result;
