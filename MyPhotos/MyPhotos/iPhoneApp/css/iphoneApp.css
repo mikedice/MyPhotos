@@ -1,0 +1,36 @@
+﻿#debug-message-1
+{
+    position:absolute;
+    top:2px;
+    left:2px;
+}
+#debug-message-2
+{
+    position:absolute;
+    top:12px;
+    left:2px;
+}
+
+.iphone-gallery-image-portrait{
+    width: 100%;
+    margin-top: 80px;
+    display:block;
+}
+.iphone-gallery-image-landscape-portrait {
+    width:26%;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.iphone-gallery-image-landscape-landscape {
+    width:60%;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.iPhone-thumbnail-holder{
+    background-color:peachpuff;
+    text-align:center;
+}

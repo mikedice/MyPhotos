@@ -200,10 +200,18 @@
     <Compile Include="Services\Image.cs" />
     <Compile Include="Services\ImageMetadata.cs" />
     <Compile Include="Services\ISiteConfiguration.cs" />
+    <Compile Include="Services\Orientation.cs" />
     <Compile Include="Services\SiteConfiguration.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="iPhoneApp\app\iPhoneApp.js" />
+    <Content Include="iPhoneApp\controllers\galleriesListController.js" />
+    <Content Include="iPhoneApp\controllers\galleryViewController.js" />
+    <Content Include="iPhoneApp\css\iphoneApp.css" />
+    <Content Include="iPhoneApp\partials\list-galleries.html" />
+    <Content Include="iPhoneApp\partials\view-gallery.html" />
+    <Content Include="iPhoneApp\services\contentService.js" />
     <Content Include="AngularApp\app\myPhotosApp.js" />
     <Content Include="AngularApp\controllers\galleriesListController.js" />
     <Content Include="AngularApp\controllers\galleryViewController.js" />
@@ -282,6 +290,8 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\PhotoManager\Index.cshtml" />
     <Content Include="Views\Shared\_Layout.mobile.cshtml" />
+    <Content Include="Views\Shared\_Layout.iPhone.cshtml" />
+    <Content Include="Views\Home\Index.iPhone.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="AngularApp\lib\" />

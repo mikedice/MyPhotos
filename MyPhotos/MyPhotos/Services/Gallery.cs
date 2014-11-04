@@ -160,6 +160,7 @@ namespace MyPhotos.Services
                 {
                     imageDict[fileName].ThumbnailUrl = url;
                 }
+                imageDict[fileName].SetOrientation(file);
             }
 
             files = Directory.EnumerateFiles(galleryFileRoot, MobileFileSuffix, SearchOption.TopDirectoryOnly);
@@ -175,6 +176,7 @@ namespace MyPhotos.Services
                 {
                     imageDict[fileName].MobileUrl = url;
                 }
+                imageDict[fileName].SetOrientation(file);
             }
 
             files = Directory.EnumerateFiles(galleryFileRoot, WebFileSuffix, SearchOption.TopDirectoryOnly);
@@ -190,6 +192,7 @@ namespace MyPhotos.Services
                 {
                     imageDict[fileName].WebUrl = url;
                 }
+                imageDict[fileName].SetOrientation(file);
             }
 
             files = Directory.EnumerateFiles(galleryFileRoot, FullFileSuffix, SearchOption.TopDirectoryOnly);
@@ -205,6 +208,7 @@ namespace MyPhotos.Services
                 {
                     imageDict[fileName].FullUrl = url;
                 }
+                imageDict[fileName].SetOrientation(file);
             }
 
             List<Image> imgList = new List<Image>();

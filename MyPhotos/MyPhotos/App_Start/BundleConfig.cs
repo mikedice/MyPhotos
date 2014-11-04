@@ -30,6 +30,14 @@ namespace MyPhotos
                       "~/AngularApp/controllers/galleryViewController.js",
                       "~/AngularApp/services/contentService.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/iPhoneApp").Include(
+                "~/iPhoneApp/app/iPhoneApp.js",
+                "~/iPhoneApp/controllers/galleriesListController.js",
+                "~/iPhoneApp/controllers/galleryViewController.js",
+                "~/iPhoneApp/services/contentService.js"));
+            bundles.Add(new StyleBundle("~/Content/iPhone").Include(
+                  "~/iPhoneApp/css/iPhoneApp.css"));
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));

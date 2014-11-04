@@ -1,0 +1,24 @@
+﻿<div ng-repeat="viewGallery in galleryCollection.ViewGalleries">
+    <h3>{{viewGallery.Gallery.Metadata.Name}}</h3>
+    <p>{{viewGallery.Gallery.Metadata.GalleryDate | date : 'MM/dd/yyyy'}}</p>
+    <h4>{{viewGallery.Gallery.Metadata.GalleryLocation}}</h4>
+    <p >{{viewGallery.Gallery.Metadata.GalleryCaption}}</p>
+    <div class="iPhone-thumbnail-holder">
+        <ul ng-if="viewGallery.ColumnSets.Column1" class="image-cloud-column">
+            <li ng-repeat="image in viewGallery.ColumnSets.Column1" class="image-cloud-li">
+                <img class="thumbnail-cloud-image"
+                     src="{{image.ThumbnailUrl}}"
+                     alt="thumb"
+                     ng-click="startViewer(viewGallery.Gallery.Metadata.Name, image.Name)" />
+            </li>
+        </ul>
+        <ul ng-if="viewGallery.ColumnSets.Column2" class="image-cloud-column">
+            <li ng-repeat="image in viewGallery.ColumnSets.Column2" class="image-cloud-li">
+                <img class="thumbnail-cloud-image"
+                     src="{{image.ThumbnailUrl}}"
+                     alt="thumb"
+                     ng-click="startViewer(viewGallery.Gallery.Metadata.Name, image.Name)" />
+            </li>
+        </ul>
+    </div>
+</div>
