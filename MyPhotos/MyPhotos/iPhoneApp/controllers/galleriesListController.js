@@ -35,19 +35,31 @@ app.controller("galleriesListController", [
                     'Column1': [],
                     'Column2': []
                 };
+                var column1 = [];
+                var column2 = [];
 
                 for (var x = 0; x<galleryCollection[i].Gallery.Images.length; x++)
                 {
                     if ((x%2)!=0)
                     {
-                        galleryCollection[i].ColumnSets.Column1.push(
-                            galleryCollection[i].Gallery.Images[x]);
+                        column1.push(galleryCollection[i].Gallery.Images[x]);
                     }else
                     {
-                        galleryCollection[i].ColumnSets.Column2.push(
-                            galleryCollection[i].Gallery.Images[x]);
-
+                        column2.push(galleryCollection[i].Gallery.Images[x]);
                     }
+                }
+                if (column1.length > column2.length)
+                {
+                    galleryCollection[i].ColumnSets = {
+                        'Column1': column1,
+                        'Column2': column2
+                    };
+                }
+                else {
+                    galleryCollection[i].ColumnSets = {
+                        'Column1': column2,
+                        'Column2': column1
+                    };
                 }
             }
         }

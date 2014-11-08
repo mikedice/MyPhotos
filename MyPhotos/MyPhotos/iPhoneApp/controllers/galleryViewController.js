@@ -36,6 +36,12 @@ app.controller('galleryViewController', ['$scope', '$routeParams', '$window', '$
         window.addEventListener('orientationchange', function (e) {
             setWindowOrientation();
             setOrientationBasedStyle();
+
+            // iPhone hack-make the address bar do the right thing
+            setTimeout(function () {
+                window.scrollTo(0, -100);
+            }, 750);
+
         });
 
         imageElements = [];

@@ -1,6 +1,9 @@
-﻿<div id="current-image-holder" ng-swipe-left="handleLeftSwipe();" ng-swipe-right="handleRightSwipe();">
-</div>
-<div id="image-metadata-block" class="image-metadata">
-    <p ng-if="imageCaption">{{imageCaption}}</p>
-    <a href="{{imageFullUrl}}" download="{{imageName}}"><img src="/images/downloadIcon.png" /></a>
+﻿<div id="current-image-container" ng-swipe-left="handleLeftSwipe();" ng-swipe-right="handleRightSwipe();">
+    <div id="current-image-holder"></div> <!--GalleryViewController is going to place current image here-->
+
+    <!--Caption block which is over the top of the image using CSS-->
+    <div id="image-metadata-block" class="image-metadata">
+        <p ng-if="imageCaption">{{imageCaption}}</p>
+        <a href="{{imageFullUrl}}" download="{{imageName}}"><img src="/images/downloadIcon.png" /></a>
+    </div>
 </div>
