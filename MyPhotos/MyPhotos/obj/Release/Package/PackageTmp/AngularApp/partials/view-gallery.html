@@ -3,11 +3,13 @@
     <div class="row display-gallery-block" ng-repeat="image in gallery.Gallery.Images">
         <img ng-if="!scope.mobile" src="{{image.WebUrl}}" alt="" />
         <img ng-if="scope.mobile" src="{{image.MobileUrl}}" alt="" />
-        <p id="caption">{{image.ImageMetadata.Caption}}</p>
-        <ul class="list-inline">
-            <li>{{image.Name}}</li>
-            <li><a href="{{image.FullUrl}}" download="{{image.Name}}">download full size</a></li>
-        </ul>
+        <div class="image-metadata">
+            <p id="caption">{{image.ImageMetadata.Caption}}</p>
+            <ul class="list-inline">
+                <li>{{image.Name}}</li>
+                <li><a href="{{image.FullUrl}}" download="{{image.Name}}"><img src="/images/downloadIcon.png" /></a></li>
+            </ul>
+        </div>
         <hr />
     </div>
 </div>

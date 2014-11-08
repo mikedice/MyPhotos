@@ -205,6 +205,7 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="images\downloadIcon.png" />
     <Content Include="iPhoneApp\app\iPhoneApp.js" />
     <Content Include="iPhoneApp\controllers\galleriesListController.js" />
     <Content Include="iPhoneApp\controllers\galleryViewController.js" />
