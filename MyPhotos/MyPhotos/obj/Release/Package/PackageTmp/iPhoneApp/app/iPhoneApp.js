@@ -1,4 +1,4 @@
-﻿var myapp = angular.module('iPhoneApp', ['ngRoute', 'ngTouch']);
+﻿var myapp = angular.module('iPhoneApp', ['ngRoute', 'ngTouch', 'ui.bootstrap']);
 myapp.config(['$routeProvider', function ($routeProvider) {
     $routeProvider.when('/', {
         templateUrl: '/iPhoneApp/partials/list-galleries.html',

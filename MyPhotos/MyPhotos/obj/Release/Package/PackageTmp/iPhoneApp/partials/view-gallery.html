@@ -4,6 +4,7 @@
     <!--Caption block which is over the top of the image using CSS-->
     <div id="image-metadata-block" class="image-metadata">
         <p ng-if="imageCaption">{{imageCaption}}</p>
-        <a href="{{imageFullUrl}}" download="{{imageName}}"><img src="/images/downloadIcon.png" /></a>
+        <a ng-href="{{imageFullUrl}}" download="{{imageName}}"><img src="/images/downloadIcon2.png" /></a>
+        <a href="" ng-click="showInfoPane()"><img src="/images/info-icon.png" /></a>
     </div>
 </div>

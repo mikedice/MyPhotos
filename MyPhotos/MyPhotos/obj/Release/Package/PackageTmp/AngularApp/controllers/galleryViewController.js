@@ -6,7 +6,21 @@ app.controller('galleryViewController', ['$scope', '$routeParams', 'contentServi
 
     contentService.getGallery($routeParams.galleryName).then(
        function (success) {
-           $scope.gallery = success.ViewGalleries[0];
+           var gallery = success.ViewGalleries[0].Gallery;
+
+           if ($routeParams.startImage)
+           {
+               for (var i = 0; i < gallery.Images.length; i++)
+               {
+                   if (gallery.Images[i].Name == $routeParams.startImage)
+                   {
+                       gallery.Images[i].active = true;
+                       break;
+                   }
+               }
+           }
+
+           $scope.gallery = gallery
        },
        function (error) {
            $scope.errorMessage = "failed to retrieve galleries";

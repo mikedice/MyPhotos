@@ -1,5 +1,5 @@
-﻿var app = angular.module('iPhoneApp');
-app.controller('galleryViewController', ['$scope', '$routeParams', '$window', '$log', 'contentService', function ($scope, $routeParams, $window, $log, contentService) {
+﻿
+angular.module('iPhoneApp').controller('galleryViewController', ['$scope', '$modal', '$routeParams', '$window', '$log', 'contentService', function ($scope, $modal, $routeParams, $window, $log, contentService) {
     var imageElements;
     var currentIndex;
     var imageCount;
@@ -28,6 +28,15 @@ app.controller('galleryViewController', ['$scope', '$routeParams', '$window', '$
         showImageAt(idx);
     }
 
+
+    $scope.showInfoPane = function () {
+        $modal.open({
+            templateUrl: '/iPhoneApp/partials/info-modal.html',
+            controller: 'InfoModalController',
+            backdrop: 'static'
+            });
+    }
+
     var initialize = function(gal)
     {
         currentIndex = 0;
@@ -50,7 +59,20 @@ app.controller('galleryViewController', ['$scope', '$routeParams', '$window', '$
         imageCount = $scope.ImageList.length;
         createImageObjects($scope);
         setOrientationBasedStyle();
-        showImageAt(0);
+
+        var startIndex = 0;
+        if ($routeParams.startImage)
+        {
+            for (var i = 0; i<viewGallery.Gallery.Images.length; i++)
+            {
+                if (viewGallery.Gallery.Images[i].Name == $routeParams.startImage)
+                {
+                    startIndex = i;
+                    break;
+                }
+            }
+        }
+        showImageAt(startIndex);
     }
 
     var setWindowOrientation = function () {
@@ -130,6 +152,7 @@ app.controller('galleryViewController', ['$scope', '$routeParams', '$window', '$
 
     var showImageAt = function(index)
     {
+        currentIndex = index;
         var holder = angular.element(document.getElementById('current-image-holder'));
         holder.empty();
         setOrientationBasedStyle();
@@ -172,3 +195,4 @@ app.controller('galleryViewController', ['$scope', '$routeParams', '$window', '$
             };
     }
 }]);
+

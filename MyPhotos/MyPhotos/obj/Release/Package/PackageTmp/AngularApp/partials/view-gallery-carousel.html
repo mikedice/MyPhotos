@@ -1,0 +1,13 @@
+﻿<div>
+    <h2>{{gallery.Gallery.Metadata.Name}}</h2>
+
+    <carousel interval="myInterval">
+        <slide ng-repeat="image in gallery.Images" active="image.active">
+            <img ng-src="{{image.WebUrl}}" style="margin:auto;">
+            <div class="carousel-caption">
+                <p>{{image.ImageMetadata.Caption}}</p>
+                <a ng-href="{{image.FullUrl}}" download="image.Name" target="_blank">download</a>
+            </div>
+        </slide>
+    </carousel>
+</div>

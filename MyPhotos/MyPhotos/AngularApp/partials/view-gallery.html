@@ -1,5 +1,6 @@
 ﻿<div>
     <h2>{{gallery.Gallery.Metadata.Name}}</h2>
+   
     <div class="row display-gallery-block" ng-repeat="image in gallery.Gallery.Images">
         <img ng-if="!scope.mobile" src="{{image.WebUrl}}" alt="" />
         <img ng-if="scope.mobile" src="{{image.MobileUrl}}" alt="" />
@@ -7,7 +8,7 @@
             <p id="caption">{{image.ImageMetadata.Caption}}</p>
             <ul class="list-inline">
                 <li>{{image.Name}}</li>
-                <li><a href="{{image.FullUrl}}" download="{{image.Name}}"><img src="/images/downloadIcon.png" /></a></li>
+                <li><a href="{{image.FullUrl}}" download="{{image.Name}}"><img src="/images/downloadIcon2.png" /></a></li>
             </ul>
         </div>
         <hr />

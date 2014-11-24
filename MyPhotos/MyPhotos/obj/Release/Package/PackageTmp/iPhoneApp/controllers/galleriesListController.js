@@ -1,5 +1,4 @@
-﻿var app = angular.module('iPhoneApp');
-app.controller("galleriesListController", [
+﻿angular.module('iPhoneApp').controller("galleriesListController", [
     'contentService',
     '$scope',
     '$location', function (contentService, $scope, $location) {
