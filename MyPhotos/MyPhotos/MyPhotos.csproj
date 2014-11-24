@@ -206,10 +206,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AngularApp\partials\view-gallery-carousel.html" />
+    <Content Include="images\angularjs_icon.png" />
+    <Content Include="images\aspnet_icon.png" />
     <Content Include="images\downloadIcon.png" />
     <Content Include="images\downloadIcon2.png" />
     <Content Include="images\Info-icon.png" />
     <Content Include="images\Info-iconBig.png" />
+    <Content Include="images\twitter-bootstrap.jpg" />
     <Content Include="iPhoneApp\app\iPhoneApp.js" />
     <Content Include="iPhoneApp\controllers\galleriesListController.js" />
     <Content Include="iPhoneApp\controllers\galleryViewController.js" />

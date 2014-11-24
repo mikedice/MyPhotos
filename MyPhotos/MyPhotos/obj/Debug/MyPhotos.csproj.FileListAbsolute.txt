@@ -52,9 +52,9 @@ C:\Users\mikedice\Documents\GitHub\MyPhotos\MyPhotos\MyPhotos\bin\Microsoft.Owin
 C:\Users\mikedice\Documents\GitHub\MyPhotos\MyPhotos\MyPhotos\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\mikedice\Documents\GitHub\MyPhotos\MyPhotos\MyPhotos\obj\Debug\MyPhotos.dll
 C:\Users\mikedice\Documents\GitHub\MyPhotos\MyPhotos\MyPhotos\obj\Debug\MyPhotos.pdb
-C:\Users\mikedice\Documents\GitHub\MyPhotos\MyPhotos\MyPhotos\obj\Debug\MyPhotos.csprojResolveAssemblyReference.cache
 C:\Users\mikedice\Documents\GitHub\MyPhotos\MyPhotos\MyPhotos\bin\Microsoft.Practices.Unity.Configuration.dll
 C:\Users\mikedice\Documents\GitHub\MyPhotos\MyPhotos\MyPhotos\bin\Microsoft.Practices.Unity.dll
 C:\Users\mikedice\Documents\GitHub\MyPhotos\MyPhotos\MyPhotos\bin\Unity.Mvc5.dll
 C:\Users\mikedice\Documents\GitHub\MyPhotos\MyPhotos\MyPhotos\bin\Microsoft.Practices.Unity.xml
 C:\Users\mikedice\Documents\GitHub\MyPhotos\MyPhotos\MyPhotos\bin\Microsoft.Practices.Unity.Configuration.xml
+C:\Users\mikedice\Documents\GitHub\MyPhotos\MyPhotos\MyPhotos\obj\Debug\MyPhotos.csprojResolveAssemblyReference.cache

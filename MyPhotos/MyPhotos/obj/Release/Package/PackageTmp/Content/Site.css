@@ -66,6 +66,7 @@ textarea {
 
 .gallery-container {
     min-width: 960px;
+    margin-top:25px;
 }
 
 .display-gallery-block a{
@@ -99,3 +100,7 @@ textarea {
     border-width: 1px;
 }
 
+.about-icon {
+    margin-left:15px;
+    max-height: 100px;
+}
