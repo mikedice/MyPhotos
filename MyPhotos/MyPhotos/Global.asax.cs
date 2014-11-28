@@ -24,6 +24,13 @@ namespace MyPhotos
                 ContextCondition = (context => context.GetOverriddenUserAgent().IndexOf
                     ("iPhone", StringComparison.OrdinalIgnoreCase) >= 0)
             });
+
+            DisplayModeProvider.Instance.Modes.Insert(0, new DefaultDisplayMode("windowsPhone")
+            {
+                ContextCondition = (context => context.GetOverriddenUserAgent().IndexOf
+                    ("windows phone", StringComparison.OrdinalIgnoreCase) >= 0)
+            });
+
         }
     }
 }

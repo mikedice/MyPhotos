@@ -244,6 +244,15 @@
     <None Include="Properties\PublishProfiles\MyPhotos6085.pubxml" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="images\defaultThumbnail.png" />
+    <Content Include="mobileApp\app\mobileApp.js" />
+    <Content Include="mobileApp\controllers\galleriesListController.js" />
+    <Content Include="mobileApp\controllers\galleryViewController.js" />
+    <Content Include="mobileApp\controllers\InfoModalController.js" />
+    <Content Include="mobileApp\css\mobileApp.css" />
+    <Content Include="mobileApp\partials\info-modal.html" />
+    <Content Include="mobileApp\partials\list-galleries.html" />
+    <Content Include="mobileApp\partials\view-gallery.html" />
+    <Content Include="mobileApp\services\contentService.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-2.1.1.js" />
@@ -303,6 +312,7 @@
     <Content Include="Views\Shared\_Layout.mobile.cshtml" />
     <Content Include="Views\Shared\_Layout.iPhone.cshtml" />
     <Content Include="Views\Home\Index.iPhone.cshtml" />
+    <Content Include="Views\Home\Index.mobile.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="AngularApp\lib\" />
