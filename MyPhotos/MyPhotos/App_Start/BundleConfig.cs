@@ -30,6 +30,10 @@ namespace MyPhotos
                       "~/AngularApp/controllers/galleryViewController.js",
                       "~/AngularApp/services/contentService.js"));
 
+            bundles.Add(new StyleBundle("~/Content/css").Include(
+                      "~/Content/bootstrap.css",
+                      "~/Content/site.css"));
+
             bundles.Add(new ScriptBundle("~/bundles/iPhoneApp").Include(
                 "~/iPhoneApp/app/iPhoneApp.js",
                 "~/iPhoneApp/controllers/galleriesListController.js",
@@ -52,9 +56,16 @@ namespace MyPhotos
                     "~/Content/bootstrap.css",
                     "~/mobileApp/css/mobileApp.css"));
 
-            bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+            bundles.Add(new ScriptBundle("~/bundles/windowsPhoneApp").Include(
+                    "~/windowsPhoneApp/app/windowsPhoneApp.js",
+                    "~/windowsPhoneApp/controllers/galleriesListController.js",
+                    "~/windowsPhoneApp/controllers/galleryViewController.js",
+                    "~/windowsPhoneApp/controllers/InfoModalController.js",
+                    "~/windowsPhoneApp/services/contentService.js"));
+
+            bundles.Add(new StyleBundle("~/Content/windowsPhone").Include(
+                    "~/Content/bootstrap.css",
+                    "~/windowsPhoneApp/css/windowsPhoneApp.css"));
 
             // Set EnableOptimizations to false for debugging. For more information,
             // visit http://go.microsoft.com/fwlink/?LinkId=301862

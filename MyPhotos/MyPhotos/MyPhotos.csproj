@@ -244,6 +244,15 @@
     <None Include="Properties\PublishProfiles\MyPhotos6085.pubxml" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="images\defaultThumbnail.png" />
+    <Content Include="windowsPhoneApp\app\windowsPhoneApp.js" />
+    <Content Include="windowsPhoneApp\controllers\galleriesListController.js" />
+    <Content Include="windowsPhoneApp\controllers\galleryViewController.js" />
+    <Content Include="windowsPhoneApp\controllers\InfoModalController.js" />
+    <Content Include="windowsPhoneApp\css\windowsPhoneApp.css" />
+    <Content Include="windowsPhoneApp\partials\info-modal.html" />
+    <Content Include="windowsPhoneApp\partials\list-galleries.html" />
+    <Content Include="windowsPhoneApp\partials\view-gallery.html" />
+    <Content Include="windowsPhoneApp\services\contentService.js" />
     <Content Include="mobileApp\app\mobileApp.js" />
     <Content Include="mobileApp\controllers\galleriesListController.js" />
     <Content Include="mobileApp\controllers\galleryViewController.js" />
@@ -312,7 +321,10 @@
     <Content Include="Views\Shared\_Layout.mobile.cshtml" />
     <Content Include="Views\Shared\_Layout.iPhone.cshtml" />
     <Content Include="Views\Home\Index.iPhone.cshtml" />
+    <Content Include="Views\Home\Index.windowsPhone.cshtml" />
+    <Content Include="Views\Shared\_Layout.windowsPhone.cshtml" />
     <Content Include="Views\Home\Index.mobile.cshtml" />
+    <Content Include="Views\Home\Store.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="AngularApp\lib\" />

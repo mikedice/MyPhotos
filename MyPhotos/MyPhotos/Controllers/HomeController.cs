@@ -34,5 +34,10 @@ namespace MyPhotos.Controllers
         {
             return View();
         }
+
+        public ActionResult Store()
+        {
+            return View();
+        }
     }
 }

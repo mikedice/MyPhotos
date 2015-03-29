@@ -104,3 +104,23 @@ textarea {
     margin-left:15px;
     max-height: 100px;
 }
+
+.payment-table thead tr th {
+    vertical-align: top;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+}
+
+.payment-table tbody tr td {
+    vertical-align: top;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.store-top-spanner {
+    height: 30px;
+}
+.store-bottom-spanner {
+    height: 300px;
+}

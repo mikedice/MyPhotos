@@ -1,5 +1,5 @@
-﻿var app = angular.module('iPhoneApp');
-app.service('contentService', ['$http', '$q', function ($http, $q) {
+﻿
+angular.module('iPhoneApp').service('contentService', ['$http', '$q', function ($http, $q) {
     this.getHomepageGalleries = function () {
 
         var deferred = $q.defer();
